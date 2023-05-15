@@ -3084,7 +3084,7 @@ version,tls_usage);
 "  --scan             List all keys using the SCAN command.\n"
 "  --pattern <pat>    Keys pattern when using the --scan, --bigkeys or --hotkeys\n"
 "                     options (default: *).\n"
-"  --count <count>    Count option when using the --scan, --bigkeys or --hotkeys (default: 10).\n"
+"  --count <count>    Count option when using the --scan, --bigkeys or --hotkeys (default: 200).\n"
 "  --quoted-pattern <pat> Same as --pattern, but the specified string can be\n"
 "                         quoted, in order to pass an otherwise non binary-safe string.\n"
 "  --intrinsic-latency <sec> Run a test to measure intrinsic system latency.\n"
@@ -9775,7 +9775,7 @@ int main(int argc, char **argv) {
     config.get_functions_rdb_mode = 0;
     config.stat_mode = 0;
     config.scan_mode = 0;
-    config.count = 10;
+    config.count = 200;
     config.intrinsic_latency_mode = 0;
     config.pattern = NULL;
     config.rdb_filename = NULL;
